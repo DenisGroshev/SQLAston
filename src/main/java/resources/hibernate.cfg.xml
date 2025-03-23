@@ -4,22 +4,25 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <!-- Настройки подключения к PostgreSQL -->
-        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/postgres</property>
-        <property name="hibernate.connection.username">postgres</property>
+        <!-- Настройки подключения к MySQL -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mydbtest</property>
+        <property name="hibernate.connection.username">root1</property>
         <property name="hibernate.connection.password">root</property>
 
-        <!-- Диалект для PostgreSQL -->
-        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <!-- Диалект для MySQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
 
-        <!-- Отображение SQL-запросов в консоли (для разработки) -->
+        <!-- Отображение SQL -->
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
 
         <!-- Автоматическое создание/обновление таблиц -->
         <property name="hibernate.hbm2ddl.auto">update</property>
 
+
         <!-- Указание классов-сущностей -->
+        <mapping class="evil.dalas.yandex.ru.entity.User"/>
+        <mapping class="evil.dalas.yandex.ru.entity.Passport"/>
     </session-factory>
 </hibernate-configuration>
