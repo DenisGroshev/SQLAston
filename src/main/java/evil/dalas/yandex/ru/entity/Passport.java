@@ -16,30 +16,13 @@ import lombok.Setter;
 
         @OneToOne
         @JoinColumn(name = "user_id")
-        private User user; // Это свойство должно быть!
+        private User user; // Это свойство имеет персональную важность ееее
 
-        // Геттеры и сеттеры
-        public Long getId() {
-            return id;
-        }
+    public void setNumberOfPassport(Integer numberOfPassport) { // не хотело сетаться через ломбок
+        this.numberOfPassport = numberOfPassport;
+    }
 
-        public void setId(Long id) {
-            this.id = id;
-        }
-
-        public Integer getNumberOfPassport() {
-            return numberOfPassport;
-        }
-
-        public void setNumberOfPassport(Integer numberOfPassport) {
-            this.numberOfPassport = numberOfPassport;
-        }
-
-        public User getUser() {
-            return user;
-        }
-
-        public void setUser(User user) {
+    public void setUser(User user) { // Земля земля, я Юпитер, как слышно юзерные мои?
             this.user = user;
         }
     }

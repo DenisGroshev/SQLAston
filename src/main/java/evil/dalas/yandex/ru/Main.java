@@ -17,12 +17,12 @@ public class Main {
 
             // Создаем объект User
             User user = new User();
-            user.setUsername("Denis_Groshev");
-            user.setUserpassword("Den4ik");
+            user.setUsername("Eugeniy_Sibiryak");
+            user.setUserpassword("jendos");
 
             // Создаем объект Passport
             Passport passport = new Passport();
-            passport.setNumberOfPassport(213213);
+            passport.setNumberOfPassport(123123);
 
             // Устанавливаем связь между User и Passport
             user.setPassport(passport);
@@ -30,7 +30,7 @@ public class Main {
             // Сохраняем User (Passport сохранится автоматически благодаря cascade)
             session.save(user);
 
-            // Фиксируем транзакцию
+            // Фиксируем прибыль
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {

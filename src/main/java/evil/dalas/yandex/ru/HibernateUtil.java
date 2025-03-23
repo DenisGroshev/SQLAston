@@ -8,7 +8,7 @@ public class HibernateUtil {
 
     private static SessionFactory buildSessionFactory() {
         try {
-            // Загрузка конфигурации из hibernate.cfg.xml в classpath
+            // Загрузка конфига из hibernate.cfg.xml в classpath
             return new Configuration().configure().buildSessionFactory();
         } catch (Throwable ex) {
             System.err.println("Initial SessionFactory creation failed." + ex);
