@@ -24,5 +24,6 @@
         <!-- Указание классов-сущностей -->
         <mapping class="evil.dalas.yandex.ru.entity.User"/>
         <mapping class="evil.dalas.yandex.ru.entity.Passport"/>
+        <mapping class="evil.dalas.yandex.ru.entity.Order"/>
     </session-factory>
 </hibernate-configuration>

@@ -1,5 +1,7 @@
 package evil.dalas.yandex.ru;
 
+import evil.dalas.yandex.ru.entity.Order;
+import evil.dalas.yandex.ru.entity.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -8,10 +10,13 @@ public class HibernateUtil {
 
     private static SessionFactory buildSessionFactory() {
         try {
-            // Загрузка конфига из hibernate.cfg.xml в classpath
-            return new Configuration().configure().buildSessionFactory();
+            return new Configuration()
+                    .configure("hibernate.cfg.xml")  // Конфигурация из XML
+                    .addAnnotatedClass(User.class)
+                    .addAnnotatedClass(Order.class)
+                    .buildSessionFactory();
         } catch (Throwable ex) {
-            System.err.println("Initial SessionFactory creation failed." + ex);
+            System.err.println("Ошибка инициализации SessionFactory: " + ex);
             throw new ExceptionInInitializerError(ex);
         }
     }
