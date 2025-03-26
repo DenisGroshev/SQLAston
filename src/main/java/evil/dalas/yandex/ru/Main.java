@@ -1,7 +1,6 @@
 package evil.dalas.yandex.ru;
 
 import evil.dalas.yandex.ru.entity.Order;
-import evil.dalas.yandex.ru.entity.Passport;
 import evil.dalas.yandex.ru.entity.User;
 import org.hibernate.Session;
 import org.hibernate.Transaction;

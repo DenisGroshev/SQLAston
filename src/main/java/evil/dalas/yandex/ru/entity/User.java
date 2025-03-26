@@ -1,13 +1,10 @@
 package evil.dalas.yandex.ru.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
-import java.util.Objects;
 
 @Entity
 @Table(name = "users")
@@ -34,6 +31,7 @@ public class User {
         this.passport = passport;
         passport.setUser(this); // Устанавливаем обратную связь
     }
+
     public List<Order> getOrders() { return orders; }
     public void setOrders(List<Order> orders) { this.orders = orders; }
 }
